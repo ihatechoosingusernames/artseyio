@@ -1,4 +1,4 @@
-20912467492524302
+20914144323658366
 Andrews-Custom
 RP2040-Zero
 
@@ -2435,6 +2435,13 @@ speaker CUI
 0
 2
 2
+CH552G
+CH552G
+
+
+0
+16
+16
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
 Gauge, Massstab, 10mm, CopperTop, Type 1,
