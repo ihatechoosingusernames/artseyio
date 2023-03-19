@@ -10,7 +10,7 @@
 //
 // Description:
 // ------------
-// Controls PC volume via rotary encoder.
+// Implements the ARTSEYIO format in a keyboard
 //
 // References:
 // -----------
@@ -95,14 +95,6 @@ void main(void) {
     input_key_state |= READ_PIN_BIT(PIN_Y, 2);
     input_key_state |= READ_PIN_BIT(PIN_I, 1);
     input_key_state |= READ_PIN_BIT(PIN_O, 0);
-    // press_key(PIN_read(PIN_A) ? 0x00 : KEY_A);
-    // press_key(PIN_read(PIN_R) ? 0x00 : KEY_R);
-    // press_key(PIN_read(PIN_T) ? 0x00 : KEY_T);
-    // press_key(PIN_read(PIN_S) ? 0x00 : KEY_S);
-    // press_key(PIN_read(PIN_E) ? 0x00 : KEY_E);
-    // press_key(PIN_read(PIN_Y) ? 0x00 : KEY_Y);
-    // press_key(PIN_read(PIN_I) ? 0x00 : KEY_I);
-    // press_key(PIN_read(PIN_O) ? 0x00 : KEY_O);
 
     // Update key states
     set_key_state(input_key_state);
