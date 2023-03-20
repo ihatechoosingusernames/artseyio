@@ -4,3 +4,5 @@ Hardware for an [ARTSEYIO layout](https://artsey.io/) single hand keyboard. The 
 ![](images/pcb_layout.png)
 
 ![](images/3d_view.png)
+
+![](images/artseyio_complete.jpg)
