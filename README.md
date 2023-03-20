@@ -6,7 +6,7 @@ The firmware requires [SDCC](https://sdcc.sourceforge.net/) and is based on an [
 ![](images/pcb_layout.png)
 The v1.1 layout.
 
-![](images/artseyio_complete.jpg)
+![](images/artseyio_complete.jpeg)
 A completed v1.0 board.
 
 ### Flashing
