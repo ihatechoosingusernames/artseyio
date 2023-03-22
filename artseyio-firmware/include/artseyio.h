@@ -10,12 +10,12 @@
 // Delay between scans in ms
 #define SCAN_DELAY 10
 
+// Number of alternate key layers
+#define NUM_LAYERS 4
+
 #define MOD_COMBINE(mod_key, reg_key) ((uint16_t)mod_key << 8) | reg_key
 #define GET_COMBINED_MOD(combined) combined >> 8
 #define GET_COMBINED_KEY(combined) combined & 0xFF
-
-// Reverse lookup for key layers
-#define NUM_LAYERS 4
 
 struct KeyLayer {
 	uint8_t layer_mask;		// The key combination required to activate this layer
