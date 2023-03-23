@@ -69,4 +69,5 @@ void KBD_mod_release(uint8_t key) {
 // ===================================================================================
 void KBD_mod_release_all() {
   KBD_report[1] = 0;
+  HID_sendReport(KBD_report, sizeof(KBD_report));
 }

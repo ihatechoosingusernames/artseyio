@@ -11,7 +11,8 @@
 #define SCAN_DELAY 10
 
 // Number of alternate key layers
-#define NUM_LAYERS 4
+#define HOLD_LAYERS 4
+#define LOCK_LAYERS 1
 
 #define MOD_COMBINE(mod_key, reg_key) ((uint16_t)mod_key << 8) | reg_key
 #define GET_COMBINED_MOD(combined) combined >> 8
@@ -28,5 +29,7 @@ struct KeyLayer {
 
 void set_key_state(uint8_t key_state);	// Updates the state of the keys as a byte
 void tap_keys(uint8_t key_state);		// Handles tap layer keys
-void hold_keys(uint8_t key_state);		// Handles hold layer keys
 void press_key(uint16_t key_code);		// Presses a single key
+
+// Handles matching layers to key masks
+__bit search_layers(uint8_t key_state, __code const struct KeyLayer* layers[], uint8_t layer_size);

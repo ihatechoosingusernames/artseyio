@@ -10,27 +10,27 @@ __code const struct KeyLayer brace_layer = {
 	.layer_size = 6,			// 6 keys in layer
 	.layer_codes = {			// Output keys
 		{
-			.key_map = 0b01000000,
+			.key_map = 0b11000000,
 			.key_code = MOD_COMBINE(KEY_MOD_LSHIFT, KEY_9)
 		},
 		{
-			.key_map = 0b00100000,
+			.key_map = 0b10100000,
 			.key_code = MOD_COMBINE(KEY_MOD_LSHIFT, KEY_0)
 		},
 		{
-			.key_map = 0b00010000,
+			.key_map = 0b10010000,
 			.key_code = MOD_COMBINE(KEY_MOD_LSHIFT, KEY_LEFTBRACE)
 		},
 		{
-			.key_map = 0b00000100,
+			.key_map = 0b10000100,
 			.key_code = KEY_LEFTBRACE
 		},
 		{
-			.key_map = 0b00000010,
+			.key_map = 0b10000010,
 			.key_code = KEY_RIGHTBRACE
 		},
 		{
-			.key_map = 0b00000001,
+			.key_map = 0b10000001,
 			.key_code = MOD_COMBINE(KEY_MOD_LSHIFT, KEY_RIGHTBRACE)
 		}
 	}
@@ -42,27 +42,27 @@ __code const struct KeyLayer number_layer = {
 	.layer_size = 10,
 	.layer_codes = {
 		{
-			.key_map = 0b10000000,
+			.key_map = 0b10010000,
 			.key_code = KEY_1
 		},
 		{
-			.key_map = 0b01000000,
+			.key_map = 0b01010000,
 			.key_code = KEY_2
 		},
 		{
-			.key_map = 0b00100000,
+			.key_map = 0b00110000,
 			.key_code = KEY_3
 		},
 		{
-			.key_map = 0b00001000,
+			.key_map = 0b00011000,
 			.key_code = KEY_4
 		},
 		{
-			.key_map = 0b00000100,
+			.key_map = 0b00010100,
 			.key_code = KEY_5
 		},
 		{
-			.key_map = 0b00000010,
+			.key_map = 0b00010010,
 			.key_code = KEY_6
 		},
 		{
@@ -74,11 +74,11 @@ __code const struct KeyLayer number_layer = {
 			.key_code = KEY_8
 		},
 		{
-			.key_map = 0b00001100,
+			.key_map = 0b00011100,
 			.key_code = KEY_9
 		},
 		{
-			.key_map = 0b00000110,
+			.key_map = 0b00010110,
 			.key_code = KEY_0
 		}
 	},
@@ -90,31 +90,31 @@ __code const struct KeyLayer symbol_layer = {
 	.layer_size = 7,
 	.layer_codes = {
 		{
-			.key_map = 0b10000000,
+			.key_map = 0b10001000,
 			.key_code = MOD_COMBINE(KEY_MOD_LSHIFT, KEY_1)
 		},
 		{
-			.key_map = 0b01000000,
+			.key_map = 0b01001000,
 			.key_code = KEY_BACKSLASH
 		},
 		{
-			.key_map = 0b00100000,
+			.key_map = 0b00101000,
 			.key_code = KEY_SEMICOLON
 		},
 		{
-			.key_map = 0b00010000,
+			.key_map = 0b00011000,
 			.key_code = KEY_GRAVE
 		},
 		{
-			.key_map = 0b00000100,
+			.key_map = 0b00001100,
 			.key_code = MOD_COMBINE(KEY_MOD_LSHIFT, KEY_SLASH)
 		},
 		{
-			.key_map = 0b00000010,
+			.key_map = 0b00001010,
 			.key_code = KEY_MINUS
 		},
 		{
-			.key_map = 0b00000001,
+			.key_map = 0b00001001,
 			.key_code = KEY_EQUAL
 		}
 	},
@@ -126,28 +126,68 @@ __code const struct KeyLayer custom_layer = {
 	.layer_size = 6,
 	.layer_codes = {
 		{
-			.key_map = 0b10000000,
+			.key_map = 0b10000001,
 			.key_code = KEY_MUTE
 		},
 		{
-			.key_map = 0b01000000,
+			.key_map = 0b01000001,
 			.key_code = KEY_INSERT
 		},
 		{
-			.key_map = 0b00100000,
+			.key_map = 0b00100001,
 			.key_code = KEY_VOLUMEUP
 		},
 		{
-			.key_map = 0b00001000,
+			.key_map = 0b00001001,
 			.key_code = MOD_COMBINE(KEY_MOD_RSHIFT, KEY_NONE)
 		},
 		{
-			.key_map = 0b00000100,
+			.key_map = 0b00000101,
 			.key_code = KEY_SYSRQ
 		},
 		{
-			.key_map = 0b00000010,
+			.key_map = 0b00000011,
 			.key_code = KEY_VOLUMEDOWN
+		}
+	}
+};
+
+// Nav Layer
+__code const struct KeyLayer navigation_layer = {
+	.layer_mask = 0b01001010,
+	.layer_size = 8,
+	.layer_codes = {
+		{
+			.key_map = 0b10000000,
+			.key_code = KEY_LEFT
+		},
+		{
+			.key_map = 0b01000000,
+			.key_code = KEY_UP
+		},
+		{
+			.key_map = 0b00100000,
+			.key_code = KEY_DOWN
+		},
+		{
+			.key_map = 0b00010000,
+			.key_code = KEY_RIGHT
+		},
+		{
+			.key_map = 0b00001000,
+			.key_code = KEY_HOME
+		},
+		{
+			.key_map = 0b00000100,
+			.key_code = KEY_PAGEUP
+		},
+		{
+			.key_map = 0b00000010,
+			.key_code = KEY_PAGEDOWN
+		},
+		{
+			.key_map = 0b00000001,
+			.key_code = KEY_END
 		}
 	}
 };
@@ -406,7 +446,11 @@ __code const struct KeyLayer* hold_layers[] = {
 	&custom_layer
 };
 
-__code const unsigned int hold_time = 300;	// How long in milliseconds constitutes holding vs tapping
+__code const struct KeyLayer* lock_layers[] = {
+	&navigation_layer
+};
+
+__code const unsigned int hold_time = 250;	// How long in milliseconds constitutes holding vs tapping
 
 uint8_t layer_state = 0;  	// This variable keeps track of the active layer
 uint8_t prev_key_state = 0;	// The previous key state
@@ -414,13 +458,15 @@ uint8_t last_press = 0;		// The last key press that was handled
 
 unsigned int hold_timer = 0;		// How long a key has been held for
 
+struct KeyLayer* current_layer = 0;	// The currently selected alternate layer
+
 void set_key_state(uint8_t key_state) {
 	if ((key_state) && (prev_key_state == key_state)) {	// If a key is being held
 		
 		hold_timer += SCAN_DELAY;		// Update hold_timer
 
 		if ((hold_timer > hold_time) && !layer_state)	// If key is held longer than timer, update
-			hold_keys(key_state);
+			search_layers(key_state, hold_layers, HOLD_LAYERS);
 
 	// If keys are still being released from the last press
 	} else if (last_press > key_state) {
@@ -432,7 +478,7 @@ void set_key_state(uint8_t key_state) {
 		hold_timer = 0;					// Reset the hold timer
 
 		// If the hold layer key has been released, only reset the layer state
-		if ((layer_state | key_state) > key_state) {
+		if ((layer_state | key_state) > key_state && search_layers(layer_state, hold_layers, HOLD_LAYERS)) {
 			layer_state = 0;
 		} else {
 			tap_keys(prev_key_state);	// A key has been tapped
@@ -447,33 +493,24 @@ void tap_keys(uint8_t key_state) {
 	// Do a forward lookup for basic tap keys
 	if (!layer_state) {
 		// If tapped, use the tap key lookup
-		press_key(tap_lookup[key_state]);
+		if (tap_lookup[key_state] != KEY_NONE)
+			return press_key(tap_lookup[key_state]);
+
+		// If key not in tap key lookup, check in lock states
+		search_layers(key_state, lock_layers, LOCK_LAYERS);
+
 	// Do a reverse lookup for layered keys
 	} else {
-		// Look up the relevant layer
-		for (uint8_t layer_index = 0; layer_index < NUM_LAYERS; layer_index++) {
-
-			if (hold_layers[layer_index]->layer_mask == layer_state) {
-
-				// Find the correct key in the layer
-				for (uint8_t key_index = 0; key_index < hold_layers[layer_index]->layer_size; key_index++) {
-
-					// Find the correct key combination
-					if ((hold_layers[layer_index]->layer_codes[key_index].key_map | layer_state) == key_state) {
-						press_key(hold_layers[layer_index]->layer_codes[key_index].key_code);
-						return;
-					}
-				}
-			}
+		// Find the correct key in the layer
+		for (uint8_t key_index = 0; key_index < current_layer->layer_size; key_index++) {
+			// Find the correct key combination
+			if (current_layer->layer_codes[key_index].key_map == key_state)
+				return press_key(current_layer->layer_codes[key_index].key_code);
 		}
-	}
-}
 
-void hold_keys(uint8_t key_state) {
-	// Update the layer state mask if it is a valid layer
-	for (uint8_t layer_index = 0; layer_index < NUM_LAYERS; layer_index++) {
-		if (hold_layers[layer_index]->layer_mask == key_state)
-			layer_state = key_state;
+		// If key not found, check if it was the lock layer mask tapped again for release
+		if (layer_state == key_state && search_layers(layer_state, lock_layers, LOCK_LAYERS))
+			layer_state = 0;
 	}
 }
 
@@ -488,4 +525,17 @@ void press_key(uint16_t key_code) {
 		KBD_type(out_key);
 		KBD_mod_release_all();	// Release the given mod as well as any other oneshot mods
 	}
+}
+
+__bit search_layers(uint8_t key_state, __code const struct KeyLayer* layers[], uint8_t layer_size) {
+	// Update the layer state mask if it is a valid layer
+	for (uint8_t layer_index = 0; layer_index < layer_size; layer_index++) {
+		if (layers[layer_index]->layer_mask == key_state) {
+			current_layer = layers[layer_index];
+			layer_state = key_state;
+			return 1;
+		}
+	}
+
+	return 0;
 }
